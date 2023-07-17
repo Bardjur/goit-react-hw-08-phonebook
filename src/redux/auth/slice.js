@@ -22,7 +22,7 @@ const authSlice = createSlice({
       state.token = payload.token;
       state.isLoggedIn = true;
     },
-    [login.rejected]: handleReject,
+    [register.rejected]: handleReject,
 
     [login.fulfilled](state, { payload }) {
       state.user = payload.user;
@@ -34,7 +34,7 @@ const authSlice = createSlice({
     [logout.fulfilled](state) {
       state.isLoggedIn = false;
     },
-    [login.rejected]: handleReject,
+    [logout.rejected]: handleReject,
 
     [refresh.pending](state) {
       state.isRefreshing = true;
