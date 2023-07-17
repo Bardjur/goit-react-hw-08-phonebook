@@ -28,7 +28,7 @@ export default function App() {
     </Box>
   ) : (<>
     <Routes>
-      <Route path="goit-react-hw-08-phonebook/" element={<Layout />} >
+      <Route path="/" element={<Layout />} >
         <Route index element={ <RestrictedRoute component={ <Home/> } /> }/>
         <Route path="/login" element={<RestrictedRoute component={ <Login/> } /> }/>
         <Route path="/register" element={ <RestrictedRoute component={ <Register/> } /> } />
