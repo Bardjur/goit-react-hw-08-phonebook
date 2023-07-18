@@ -11,6 +11,7 @@ import {
   Typography,
   Container,
 } from '@mui/material';
+import { Link as RouterLink } from "react-router-dom";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import { useDispatch } from 'react-redux';
 import { login } from 'redux/auth/operations';
@@ -90,7 +91,7 @@ export default function Login() {
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item >
-              <Link href="register" variant="body2">
+              <Link component={RouterLink} to="/register" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>

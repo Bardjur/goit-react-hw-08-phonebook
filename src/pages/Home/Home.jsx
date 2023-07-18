@@ -1,5 +1,6 @@
 import { Box, Container, Typography, Link } from "@mui/material";
 import imgSrc from "images/contacts.png";
+import { Link as RouterLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
         textAlign="center" 
         fontWeight="700"
       >
-        <Link href="login">login</Link> or <Link href="register">register</Link> to use
+        <Link component={RouterLink} to="login">login</Link> or <Link component={RouterLink} to="register">register</Link> to use
       </Typography>
     </Container>
   )

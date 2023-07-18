@@ -6,6 +6,7 @@ import {
   Link,
   Button
 } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
@@ -53,9 +54,10 @@ export default function PageBarMenu() {
           {pages.map((page) => (
             <MenuItem key={page.name} onClick={handleClose}>
               <Link
+                component={RouterLink}
+                to={page.link}
                 underline="none"
                 textAlign="center"
-                href={page.link}
                 sx={{ color: "inherit" }}>
                 
                 {page.name}
@@ -69,7 +71,8 @@ export default function PageBarMenu() {
         {pages.map((page) => (
           <Button
             key={page.name}
-            href={page.link}
+            component={RouterLink}
+            to={page.link}
             sx={{ my: 2, color: "white", display: "block" }}
           >
             {page.name}
